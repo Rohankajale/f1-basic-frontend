@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <div class="p-5 md:p-10">
+        <div class="flex items-center gap-2 p-2">
+            <input
+                type="checkbox"
+                id="notification"
+                name="notification"
+                value="notification"
+                class="w-5 h-5 accent-blue-600 cursor-pointer"
+            >
+
+            <label
+                for="notification"
+                class="text-gray-700 cursor-pointer"
+            >
+                Send Notifications
+            </label>
+        </div>
+        <div class="overflow-x-auto rounded-xl shadow overflow-hidden">
+            <table class="min-w-full bg-white">
+                <thead class="bg-blue-900 text-white">
+                    <tr>
+                        <th class="px-4 py-3 text-left whitespace-nowrap">
+                        Position
+                        </th>
+
+                        <th class="px-4 py-3 text-left whitespace-nowrap">
+                        Image
+                        </th>                        
+
+                        <th class="px-4 py-3 text-left whitespace-nowrap">
+                        Name
+                        </th>
+
+                        <th class="px-4 py-3 text-left whitespace-nowrap">
+                        Points
+                        </th>
+
+                        <th class="px-4 py-3 text-left whitespace-nowrap">
+                        Team
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="drivers"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
