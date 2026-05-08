@@ -14,9 +14,15 @@ const loadDrivers = async () => {
 
     console.log(combinedData)
 
+    const sortedCombinedData = [...combinedData].sort(
+        (a, b) => a.positionCurrent - b.positionCurrent
+    ) 
+
+    console.log(sortedCombinedData)
+
     const container = document.getElementById('drivers')
 
-    combinedData.forEach(data => {
+    sortedCombinedData.forEach(data => {
         const row = document.createElement('tr')
         row.className = 'border-b hover:bg-gray-100 transition'
         row.style.backgroundColor = `#${data.team_colour}`
